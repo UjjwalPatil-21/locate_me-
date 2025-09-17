@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
             physioMarkers.push(marker);
 
             // --- Interactivity ---
-            item.addEventListener('mouseenter', () => {
+            item.addEventListener('mouseenter', (event) => {
                 // Don't open popup if a button is hovered
                 if (event.target.classList.contains('btn')) return;
                 marker.openPopup();
