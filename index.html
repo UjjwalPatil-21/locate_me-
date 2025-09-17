@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysioFinder - Find a Physiotherapist in Mumbai</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PhysioFinder Mumbai</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <input type="text" id="name-filter" placeholder="Filter by name...">
+            <select id="rating-filter">
+                <option value="0">Filter by minimum rating</option>
+                <option value="4.5">4.5+ Stars</option>
+                <option value="4">4+ Stars</option>
+                <option value="3.5">3.5+ Stars</option>
+                <option value="3">3+ Stars</option>
+            </select>
+            <select id="specialty-filter">
+                <option value="">Filter by specialty</option>
+                <!-- Specialties will be populated by JavaScript -->
+            </select>
+        </div>
+        <div class="container">
+            <div id="physio-list" class="physio-list-container">
+                <!-- Physiotherapist list will be dynamically generated here -->
+            </div>
+            <div id="map" class="map-container"></div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
