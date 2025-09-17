@@ -69,16 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let userCoords = null;
 
     // --- CORE ALGORITHM: HAVERSINE FORMULA ---
-    /**
-     * Calculates the great-circle distance between two points on Earth.
-     * @param {object} coords1 - The coordinates of the first point {lat, lon}.
-     * @param {object} coords2 - The coordinates of the second point {lat, lon}.
-     * @returns {number} The distance in kilometers.
-     * The Haversine formula is used because it accurately calculates distances
-     * on a sphere, which is essential for geographic data like GPS coordinates.
-     * It is superior to simpler methods like the Pythagorean theorem, which
-     * treats the Earth as a flat plane and would be highly inaccurate.
-     */
     function getDistance(coords1, coords2) {
         const R = 6371; // Earth's radius in kilometers
         const dLat = (coords2.lat - coords1.lat) * Math.PI / 180;

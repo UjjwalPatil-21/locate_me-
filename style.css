@@ -45,10 +45,10 @@ main {
 .physio-list-container {
     flex: 1;
     overflow-y: auto;
-    background-color: #fff;
+    background-color: #fff; /* White background for the container */
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    padding: 0.5rem;
 }
 
 .map-container {
@@ -58,18 +58,28 @@ main {
 }
 
 .physio-item {
+    background-color: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.12);
     padding: 1rem;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .physio-item:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
 }
 
-.physio-item:hover, .physio-item.highlighted {
+.physio-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.12);
+}
+
+.physio-item.highlighted {
     background-color: #e9f5ff;
+    border-color: #007bff;
 }
 
 .physio-item h3 {
